@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stopwatch light-theme">
+        <div class="display">
+            <span id="display">00:00:00</span>
+        </div>
+        <div class="controls">
+            <button id="startPauseButton" onclick="startPause()">Start</button>
+            <button id="resetButton" onclick="reset()">Reset</button>
+            <button id="lapButton" onclick="lap()">Lap</button>
+            <button id="restartButton" class="restart-button" onclick="restart()">Restart</button>
+            <button id="themeToggleButton" onclick="toggleTheme()">Dark Mode</button>
+        </div>
+        <ul id="lapTimes" class="lap-times">
+            <!-- Lap times will be dynamically added here -->
+        </ul>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

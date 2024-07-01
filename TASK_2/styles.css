@@ -1,0 +1,120 @@
+/* styles.css */
+
+/* General styles for both light and dark themes */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.stopwatch {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    width: 500px;
+    height: 150px;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.display {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #007bff; /* Blue color for the display */
+}
+
+.controls {
+    
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.controls button {
+    padding: 15px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+
+.lap-times {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.lap-times li {
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.restart-button {
+    background-color: #28a745; /* Green color for restart button */
+}
+
+.restart-button:hover {
+    background-color: #218838;
+}
+
+/* Dark theme */
+.stopwatch.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+.stopwatch.dark-theme .display {
+    color: #28a745; /* Green color for display in dark mode */
+}
+
+.stopwatch.dark-theme .controls button {
+    background-color: #28a745; /* Green color for buttons in dark mode */
+}
+
+.stopwatch.dark-theme .controls button:hover {
+    background-color: #218838;
+}
+
+.stopwatch.dark-theme .lap-times li {
+    background-color: #444;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+/* Cool background for both themes */
+body.light-theme {
+    background-color: #f0f0f0;
+}
+
+body.dark-theme {
+    background-color: #222;
+}
+
+@media (max-width: 400px) {
+    .stopwatch {
+        width: 100%;
+        border-radius: 0;
+    }
+}
