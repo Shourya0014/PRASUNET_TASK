@@ -1,0 +1,106 @@
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #f0f0f0, #cccccc);
+    box-shadow: 10px 10px 20px #bababa, -10px -10px 20px #ffffff;
+}
+
+body.dark-mode .container {
+    background: linear-gradient(145deg, #444, #222);
+    box-shadow: 10px 10px 20px #111, -10px -10px 20px #555;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 400;
+    font-family: "Press Start 2P", system-ui;
+    text-decoration: underline;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #bababa, -5px -5px 15px #ffffff;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+body.dark-mode .cell {
+    background-color: #444;
+    box-shadow: 5px 5px 15px #222, -5px -5px 15px #555;
+    color: #f0f0f0;
+}
+
+.cell:hover {
+    transform: scale(1.05);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 5px 5px 15px #bababa, -5px -5px 15px #ffffff;
+}
+
+button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+body.dark-mode button {
+    background-color: #555;
+    box-shadow: 5px 5px 15px #222, -5px -5px 15px #555;
+}
+
+body.dark-mode button:hover {
+    background-color: #777;
+}
